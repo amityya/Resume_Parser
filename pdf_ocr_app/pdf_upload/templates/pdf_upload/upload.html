@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Resume</title>
+    <link rel="stylesheet" href="{% static 'pdf_upload/css/style.css' %}">
+</head>
+<body>
+    <h1>Upload Resume</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Upload</button>
+    </form>
+
+    {% if extracted_text %}
+        <h2>Extracted Data:</h2>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Email:</strong> {{ email }}</p>
+        <p><strong>Mobile Number:</strong> {{ mobile_number }}</p>
+        <p><strong>Skills:</strong> {{ skills }}</p>
+        <p><strong>Total Experience:</strong> {{ total_experience }} years</p>
+        <h3>Raw Text:</h3>
+        <textarea rows="20" readonly>{{ extracted_text }}</textarea>
+    {% endif %}
+</body>
+</html>
