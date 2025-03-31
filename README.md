@@ -1,2 +1,3 @@
 # Resume_Parser
 resume parser app built with Django and Tesseract leverages Python's powerful libraries for extracting text and data from resumes. Using Tesseract OCR (Optical Character Recognition), our app can accurately scan and interpret resume PDFs and images
+It extracts key details such as contact information, work experience, education, skills, and more, transforming unstructured resume data into structured formats. This allows HR professionals and recruiters to efficiently review and analyze candidate profiles, saving time and enhancing recruitment processes. Our solution integrates seamlessly into existing HR systems, offering robust functionality without relying on external APIs.
